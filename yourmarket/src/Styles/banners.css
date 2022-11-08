@@ -1,0 +1,26 @@
+.b-container{
+    height: 50vh;
+}
+.b-row{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height:100%;
+}
+.b-col{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 250px;
+    height: 100px;
+    border: 2px solid #0000001f;
+}
+.b-col svg { 
+    font-size: 1.5rem;
+    color: #ff0000;
+}
+.b-col span { 
+    margin-left:10px;
+    font-size: 1.4rem ;
+}

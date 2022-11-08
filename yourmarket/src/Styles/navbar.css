@@ -1,0 +1,152 @@
+.n-container{
+    height: 160px;
+    padding:5px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+.n-email{
+    letter-spacing: 1.5px;
+    margin-right: 15px;
+}
+.n-row:first-child{
+    display:flex;
+    justify-content: space-between;
+    font-size:12px;
+    margin: 10px 0;
+}
+.n-row:first-child .n-col a {
+    color: #001e28;
+ }
+
+.socials img{
+    width:20px;
+    height:auto;
+    margin: 0px 15px;
+    transition: all 0.5s;
+}
+.socials img:hover{
+    transform: scale(1.3);
+}
+.n-row:nth-child(2){
+    display:flex;
+    justify-content:space-between;
+    margin: 20px 0;
+}
+#logo {
+font-size: 1.5rem;
+width:50px;
+height:40px;
+color:rgb(151, 8, 8);
+transition: all 0.5s;
+scale: 1.5;
+border: #001e28;
+font-style: italic;
+}
+#capital{
+    font-family: fantasy;
+    color: #000;
+    font-weight: lighter;
+    font-style: none;
+}
+.icons a{
+    color: #001e28;
+    font-size:18px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.icons span{
+    position: relative;
+    margin: 0 15px;
+    text-transform: uppercase;
+}
+.icons span .totalItems{
+    position: absolute;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    top:-15px;
+    right:-30px;
+    background-color:#ff0000;
+    color:#ffffff;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+nav{
+    background:rgba(0, 0, 0, 0.986);
+    height: 35px;
+}
+nav ul{
+    display: flex;
+    list-style-type:none ;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+
+}
+.list{
+    margin-right:20px;
+    font-size:20px;
+    text-transform: uppercase;
+    color:#ffff;
+    cursor:pointer;
+    letter-spacing: 2px;
+
+}
+.list a{
+    font-size:20px;
+    text-transform:uppercase;
+    color:#ffffff;
+    cursor:pointer;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+}
+.list a:hover{
+    color:#ff0000;
+    scale: (1.3);
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    
+}
+.btn{
+    display: none;
+    position: absolute;
+    right: 10px;
+    top:7px;
+    padding: 5px;
+    color:#000;
+    font-size:18px;  
+}
+.list a.active{
+    color:#ff0000;
+
+}
+
+@media screen and (max-width:590px){
+
+    .n-row:first-child{
+        font-size:9px;
+    }
+    .n-row:first-child .n-col a {
+        color: #001e28;
+     }
+    .socials img{
+        width:20px;
+        height:auto;
+        margin: 0px 5px;
+        transition: all 0.5s;
+    }
+    #logo{
+        transition: all 0.5s;
+        width:30px;
+        height:35px;
+    }
+    .list a{
+        font-size:15px;
+    }
+    .list:last-child{ 
+        margin-right: unset;
+    }
+}

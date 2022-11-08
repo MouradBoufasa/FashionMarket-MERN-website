@@ -1,0 +1,28 @@
+@font-face{
+  font-family: myfont;
+  src:url(../public/Fonts/BarlowCondensed-Regular.ttf);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+font-family: myfont;
+color:#001e28;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+button{
+  cursor:pointer;
+}

@@ -1,0 +1,56 @@
+.shop-row:first-child {
+    display: flex;
+}
+
+.shop-col:first-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-col:first-child h2 {
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.shop-col:last-child {
+    flex: 5;
+}
+
+.shop-products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.shop-pagination {
+    text-align: center;
+}
+
+.shop-btn {
+    width: max-content;
+    background-color: transparent;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.shop-btn svg {
+    transition: all 0.5s;
+}
+
+.shop-btn:hover svg {
+    color: #ff0000;
+    margin-left: 5px;
+}
+
+.shop-pagination {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 530px) {
+    .shop-row:first-child {
+        flex-direction: column;
+    }
+}
