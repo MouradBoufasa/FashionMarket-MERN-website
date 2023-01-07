@@ -9,7 +9,7 @@ const CategoryMain = () => {
   
       const fetchData = async () => {
   
-        const result = await axios.get('/api/category/');
+        const result = await axios.get('http://localhost:5000/api/category/');
   
         setCategory(result.data);
   

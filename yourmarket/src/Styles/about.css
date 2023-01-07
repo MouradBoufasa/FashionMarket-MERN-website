@@ -1,0 +1,18 @@
+.contact-container {
+  height: 80vh;
+  min-width: 60vw;
+  border: 1px solid #000;
+}
+.about-title {
+  font-size: 3rem;
+  text-align: center;
+}
+.about-website {
+  font-size: 2rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 50px;
+  text-align: justify;
+}

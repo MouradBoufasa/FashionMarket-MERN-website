@@ -1,61 +1,54 @@
+import {
+  faArrowAltCircleLeft,
+  faArrowAltCircleRight,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { sliderItems } from "../data.js";
+import "../Styles/slider.css";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
-import { faArrowAltCircleLeft, faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-import { sliderItems } from '../data.js'
-import '../Styles/slider.css'
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay } from "swiper";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
 
 const Slider = () => {
+  const [Slider, setSlider] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios.get("http://localhost:5000/api/slider");
 
-    const [slideindex, setSlideIndex] = useState(0);
+      setSlider(result.data);
+    };
 
+    fetchData();
+  }, []);
 
-    const handleClick = (direction) => {
-
-        if(direction === "left"){
-            setSlideIndex(slideindex > 0 ? slideindex - 1 : 2)
-        } else {
-            setSlideIndex(slideindex < 2 ? slideindex + 1 : 0)
-        }
-    }
-    const [Slider,setSlider] = useState([]);
-    useEffect(() => {
-  
-      const fetchData = async () => {
-  
-        const result = await axios.get('/api/slider');
-  
-        setSlider(result.data);
-  
-      }
-      
-      fetchData();
-    },[]);
-
+  SwiperCore.use([Autoplay]);
   return (
-    <div classname="s-container">
-        <div className="s-arrow left" onClick={() => handleClick("left")}>
-        <FontAwesomeIcon icon={faArrowAltCircleLeft} />
+    <div className="s-container">
+      <Swiper
+        modules={[Pagination]}
+        spaceBetween={0}
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 2000 }}
+        loop={true}
+      >
+        <div className="wrapper">
+          {sliderItems.map((item) => (
+            <SwiperSlide className="SwiperSlide">
+              <img src={item.image} id="s-img" alt="" />
+            </SwiperSlide>
+          ))}
         </div>
-        <div className="wrapper" setSlideIndex={slideindex} >
-                {sliderItems.map((item) => (
-                    <div className="slide" key={item._id}>
-                    <div className="img-container">
-                        <img src={item.image} id="s-img" alt="" />
-                    </div>
-                    </div>                    
-                ))}
-            </div>
-
-        <div className="s-arrow right" onClick={() =>handleClick('right')}>
-        <FontAwesomeIcon icon={faArrowAltCircleRight} />
-        </div>
-    <div className="s-arrow">
-        
+      </Swiper>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default Slider
+export default Slider;

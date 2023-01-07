@@ -28,7 +28,7 @@ function reducer(state, action) {
             return { ...state, cart: { ...state.cart, cartItems } };
         }
 
-        case 'WISH_ADD_ITEM': {
+        case 'WISH_ADD_ITEM': { // ac ycraser el akh.
             //add to wish
             const newItem = action.payload;
             const existItem = state.wish.wishItems.find((item) => item._id === newItem._id);

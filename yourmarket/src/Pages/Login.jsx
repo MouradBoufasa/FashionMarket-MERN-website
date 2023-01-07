@@ -1,11 +1,15 @@
 import React from 'react'
+import Footer from '../Components/Footer'
 import Navbar from '../Components/Navbar'
+import SignIn from '../Components/SignIn'
 
 const Login = () => {
   return (
     <div>
         <Navbar />
-        Login</div>
+        <SignIn />
+        <Footer />
+        </div>
   )
 }
 

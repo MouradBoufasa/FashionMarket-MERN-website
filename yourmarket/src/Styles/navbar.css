@@ -119,10 +119,12 @@ nav ul{
     color:#000;
     font-size:18px;  
 }
-.list a.active{
-    color:#ff0000;
 
-}
+
+.nav a.active {
+    color: #ff0000;
+   
+  }
 
 @media screen and (max-width:590px){
 
